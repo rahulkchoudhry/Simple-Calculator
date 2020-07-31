@@ -15,15 +15,15 @@
             </Grid>
 
             <Grid Grid.Row="1">
-                <Label Text="" />
+                <Label x:Name="Equation" Text="" />
             </Grid>
-            
+
             <Grid Grid.Row="2">
                 <Label Text="Answer" />
             </Grid>
 
             <Grid Grid.Row="3">
-                <Label Text="" />
+                <Label x:Name="Answer" Text="" />
             </Grid>
 
             <Grid Grid.Row="4">
@@ -34,13 +34,13 @@
                     <Button Text="DEL" Clicked="OnButtonDELClicked" />
                 </Grid>
                 <Grid Grid.Column="2">
-                    <Button Text="(  )" Clicked="OnButtonBRACKETClicked" />
+                    <Button Text="(" Clicked="OnButtonOPENBRClicked" />
                 </Grid>
                 <Grid Grid.Column="3">
-                    <Button Text="+" Clicked="OnButtonADDClicked" />
+                    <Button Text=")" Clicked="OnButtonCLOSEBRClicked" />
                 </Grid>
             </Grid>
-        
+
             <Grid Grid.Row="5">
                 <Grid Grid.Column="0">
                     <Button Text="7" Clicked="OnButton7Clicked"   />
@@ -52,7 +52,7 @@
                     <Button Text="9" Clicked="OnButton9Clicked" />
                 </Grid>
                 <Grid Grid.Column="3">
-                    <Button Text="-" Clicked="OnButtonMINUSClicked" />
+                    <Button Text="+" Clicked="OnButtonADDClicked" />
                 </Grid>
             </Grid>
 
@@ -67,7 +67,7 @@
                     <Button Text="6" Clicked="OnButton6Clicked" />
                 </Grid>
                 <Grid Grid.Column="3">
-                    <Button Text="x" Clicked="OnButtonTIMESClicked" />
+                    <Button Text="-" Clicked="OnButtonMINUSClicked" />
                 </Grid>
             </Grid>
 
@@ -82,7 +82,7 @@
                     <Button Text="3" Clicked="OnButton3Clicked" />
                 </Grid>
                 <Grid Grid.Column="3">
-                    <Button Text="/" Clicked="OnButtonDIVIDEClicked" />
+                    <Button Text="x" Clicked="OnButtonTIMESClicked" />
                 </Grid>
             </Grid>
 
@@ -93,12 +93,15 @@
                 <Grid Grid.Column="1">
                     <Button Text="0" Clicked="OnButton0Clicked" />
                 </Grid>
-                <Grid Grid.Column="2" Grid.ColumnSpan="2">
+                <Grid Grid.Column="2">
                     <Button Text="=" Clicked="OnButtonEQUALSClicked" />
+                </Grid>
+                <Grid Grid.Column="3">
+                    <Button Text="÷" Clicked="OnButtonDIVIDEClicked" />
                 </Grid>
 
             </Grid>
-             
+
         </Grid>
     </StackLayout>
 
