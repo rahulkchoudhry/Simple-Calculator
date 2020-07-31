@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Markup;
+using System.Data;
 
 namespace Simple_Calculator
 {
@@ -22,6 +23,7 @@ namespace Simple_Calculator
         private void OnButtonACClicked(object sender, EventArgs e)
         {
             Equation.Text = "";
+            Answer.Text = "";
         }   
         private void OnButtonDELClicked(object sender, EventArgs e)
         {
@@ -152,7 +154,11 @@ namespace Simple_Calculator
         }
         private void OnButtonEQUALSClicked(object sender, EventArgs e)
         {
-
+            DataTable dt = new DataTable();
+            string equation = Equation.Text.Replace('x', '*');
+            equation = equation.Replace('÷', '/');
+            var v = dt.Compute(equation, "");
+            Answer.Text = v.ToString();
         }
         private void OnButton0Clicked(object sender, EventArgs e)
         {
