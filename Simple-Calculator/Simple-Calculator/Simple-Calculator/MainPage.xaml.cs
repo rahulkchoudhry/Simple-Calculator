@@ -185,7 +185,16 @@ namespace Simple_Calculator
             DataTable dt = new DataTable();
             string equation = Equation.Text.Replace('x', '*');
             equation = equation.Replace('÷', '/');
-            var v = dt.Compute(equation, "");
+            string v = "";
+            try
+            {
+                v = dt.Compute(equation, "").ToString();
+            }
+            catch
+            {
+                v = "TOO LARGE";
+            }
+ 
             Answer.Text = v.ToString();
         }
         private void OnButton0Clicked(object sender, EventArgs e)
