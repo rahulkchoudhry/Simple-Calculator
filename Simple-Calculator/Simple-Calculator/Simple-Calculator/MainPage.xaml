@@ -6,11 +6,92 @@
              mc:Ignorable="d"
              x:Class="Simple_Calculator.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+    <StackLayout BackgroundColor="IndianRed">
+
+        <Grid BackgroundColor="IndianRed" Margin="20,35,20,20" RowSpacing="20" >
+
+            <Grid Grid.Row="0">
+                <Label Text="Equation" />
+            </Grid>
+
+            <Grid Grid.Row="1">
+                <Label Text="Answer" />
+            </Grid>
+
+            <Grid Grid.Row="2">
+                <Grid Grid.Column="0">
+                    <Button Text="AC"/>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <Button Text="DEL"/>
+                </Grid>
+                <Grid Grid.Column="2">
+                    <Button Text="(  )"/>
+                </Grid>
+                <Grid Grid.Column="3">
+                    <Button Text="+"/>
+                </Grid>
+            </Grid>
+        
+            <Grid Grid.Row="3">
+                <Grid Grid.Column="0">
+                    <Button Text="7"/>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <Button Text="8"/>
+                </Grid>
+                <Grid Grid.Column="2">
+                    <Button Text="9"/>
+                </Grid>
+                <Grid Grid.Column="3">
+                    <Button Text="-"/>
+                </Grid>
+            </Grid>
+
+            <Grid Grid.Row="4">
+                <Grid Grid.Column="0">
+                    <Button Text="4"/>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <Button Text="5"/>
+                </Grid>
+                <Grid Grid.Column="2">
+                    <Button Text="6"/>
+                </Grid>
+                <Grid Grid.Column="3">
+                    <Button Text="x"/>
+                </Grid>
+            </Grid>
+
+            <Grid Grid.Row="5">
+                <Grid Grid.Column="0">
+                    <Button Text="1"/>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <Button Text="2"/>
+                </Grid>
+                <Grid Grid.Column="2">
+                    <Button Text="3"/>
+                </Grid>
+                <Grid Grid.Column="3">
+                    <Button Text="/"/>
+                </Grid>
+            </Grid>
+
+            <Grid Grid.Row="6">
+                <Grid Grid.Column="0">
+                    <Button Text="."/>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <Button Text="0"/>
+                </Grid>
+                <Grid Grid.Column="2" Grid.ColumnSpan="2">
+                    <Button Text="="/>
+                </Grid>
+
+            </Grid>
+            
+        </Grid>
     </StackLayout>
 
 </ContentPage>
