@@ -10,6 +10,10 @@ namespace Simple_Calculator
         {
             InitializeComponent();
 
+            #if DEBUG
+                HotReloader.Current.Run(this);
+            #endif
+
             MainPage = new MainPage();
         }
 
