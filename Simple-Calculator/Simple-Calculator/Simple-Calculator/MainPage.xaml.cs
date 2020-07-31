@@ -154,6 +154,34 @@ namespace Simple_Calculator
         }
         private void OnButtonEQUALSClicked(object sender, EventArgs e)
         {
+            char last = Equation.Text.ElementAtOrDefault(Equation.Text.Length - 1);
+            if (last == '+' || last == '-' || last == 'x' || last == '÷' || last == '.')
+            {
+                Equation.Text = Equation.Text.Remove(Equation.Text.Length - 1, 1);
+            }
+
+            int openCount = 0;
+            int closeCount = 0;
+
+            foreach (char c in Equation.Text)
+            {
+
+                if (c == '(')
+                {
+                    openCount++;
+                }
+                else if (c == ')')
+                {
+                    closeCount++;
+                }
+            }
+            int bracketsNeeded = openCount - closeCount;
+            for (int i=0; i<bracketsNeeded; i++)
+            {
+                Equation.Text += ")";
+            }
+
+
             DataTable dt = new DataTable();
             string equation = Equation.Text.Replace('x', '*');
             equation = equation.Replace('÷', '/');
